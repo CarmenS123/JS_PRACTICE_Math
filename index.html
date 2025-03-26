@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ICT P1] Math Methods</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+            body {
+                background-image: url(STARTBGYEA.png);
+                font-family:cursive;
+            }
+
+
+        </style>
+
+</head>
+
+<body>
+
+    <br>
+
+    <div class="container">
+
+<h1> Math Methods</h1>
+
+<details ontoggle="message1()"> 
+    <summary>
+        <u> Instructions </u>
+
+        <br>
+
+        <i id="ans"> </i>
+    </summary>
+</details>
+
+    </div>
+
+<br>
+
+    <div class="container">
+
+        <input type="number" class="form-control" id="num1">
+
+        <br>
+
+        <button type="button" class="btn btn-success" onclick="RndResult()"> Rounded!</button>
+
+        <button type="button" class="btn btn-success" onclick="RaisedResult()"> Raised to the 2nd Power!</button>
+
+        <br><br>
+
+        <button type="button" class="btn btn-warning" onclick="SqrtResult()"> Squareroot!</button>
+
+        <button type="button" class="btn btn-danger" onclick="AbsResult()"> Absolute Value!</button>
+
+        <br><br>
+
+        <button type="button" class="btn btn-success" onclick="MinResult()"> Minimum Number! (between 1-10)</button>
+
+        <br><br>
+        
+        <button type="button" class="btn btn-danger" onclick="MaxResult()"> Maximum Number! (between 1-10)</button>
+
+        <br><br>
+
+        <button type="button" class="btn btn-info" onclick="RandomResult()"> Randomize!</button>
+
+        <br>
+        
+        <br>
+
+        <kbd id="result1">Answer is... </kbd>
+
+        
+    </div>
+
+    <script>
+
+        function message1(){
+        document.getElementById ("ans").innerHTML = "Input 1 number then click the button below.";
+        }
+
+        function RndResult(){
+        var rnd = document.getElementById("num1").value;
+        document.getElementById("result1").innerHTML = Math.round(rnd);
+
+        }
+
+        function RaisedResult(){
+        var raised = document.getElementById("num1").value;
+        document.getElementById("result1").innerHTML = Math.pow(raised,2);
+
+        }
+
+        function SqrtResult(){
+        var sqrt = document.getElementById("num1").value;
+        document.getElementById("result1").innerHTML = Math.sqrt(sqrt);
+
+        }
+
+        function AbsResult(){
+        var abs = document.getElementById("num1").value;
+        document.getElementById("result1").innerHTML = Math.abs(abs);
+
+        }
+
+        function MinResult(){
+        var min = document.getElementById("num1").value;
+        document.getElementById("result1").innerHTML = Math.min(1,2,3,4,5,6,7,8,9,10);
+
+        }
+
+        function MaxResult(){
+        var max = document.getElementById("num1").value;
+        document.getElementById("result1").innerHTML = Math.max(1,2,3,4,5,6,7,8,9,10);
+
+        }
+
+        function RandomResult(){
+        var random = document.getElementById("num1").value;
+        document.getElementById("result1").innerHTML = Math.round(Math.random(random)*10);
+
+        }
+    </script>
+
+</body>
+
+    </html>
